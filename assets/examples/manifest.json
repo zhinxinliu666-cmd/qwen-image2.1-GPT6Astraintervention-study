@@ -1,0 +1,23 @@
+[
+  {
+    "file": "art_styles_chair.jpg",
+    "sha256": "2b5837fe1e5cf9abd82c5ef7fdeeb2cca765f59bd8c2c26948ce775d8dfb4aeb",
+    "caption": "ImgEdit input 000278574; original/native oil/native watercolor/native pencil; seed42",
+    "selection": "Selected qualitative example; no population error-rate claim",
+    "modifications": "Existing experimental comparison sheet copied without pixel changes"
+  },
+  {
+    "file": "identity_person_repaired.jpg",
+    "sha256": "341ec1eca365965af948c550626c959c0bf4731ecad21ca2e7ded0149d088c34",
+    "caption": "Street input 00224; source/native baseline/frequency-guided candidate; seed123",
+    "selection": "Selected qualitative example; no population error-rate claim",
+    "modifications": "Existing experimental comparison sheet copied without pixel changes"
+  },
+  {
+    "file": "identity_truck_persistent.jpg",
+    "sha256": "9ecd7420a4eb646d44ba32a4fb03bda1bafc80c8a8ac92acca24fbe3d5993ef6",
+    "caption": "Street input 00640; source/native baseline/frequency-guided candidate; seed42",
+    "selection": "Selected qualitative example; no population error-rate claim",
+    "modifications": "Existing experimental comparison sheet copied without pixel changes"
+  }
+]

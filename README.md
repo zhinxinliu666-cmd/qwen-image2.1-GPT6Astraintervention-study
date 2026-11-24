@@ -24,7 +24,7 @@ DINO和CLIP为代理指标。30新来源90对结果的完整视觉审查仍待�
 - **选择性修复**：频率约束修复了预选行人／伞新增案例，单独调整CFG未能修复该例；同一频率方法对预选货车新增案例仍未奏效。
 - **内容与风格的权衡**：部分较强约束提高内容相似度，同时压制艺术转换。实验采用内容和风格联合评价，并保留失败结果。
 
-这些发现来自具体案例及配对评估，对象新增案例数量不足以估计总体错误率。早期一次拼图边界误判已撤回，不计入模型失效发现。原图、输出与干预对照保存在本地完整归档中，公开图片需完成来源与再分发条件核查。
+这些发现来自具体案例及配对评估，对象新增案例数量不足以估计总体错误率。早期一次拼图边界误判已撤回，不计入模型失效发现。精选的原图与生成结果见[实验图库](docs/GALLERY.md)，完整数据保存在研究归档中。
 
 ## 目录
 
@@ -64,4 +64,12 @@ python scripts/run_image_edit.py --model /path/to/Qwen-Image-2.1 \
   --patch artifacts/output_head_patches.pt --variant distill05 --output runs/patched
 ```
 
-Built with Qwen. 权重材料仅供研究与评估，遵循 [Qwen Research License](licenses/QWEN_RESEARCH_LICENSE.txt)。来源图片和生成对比图的公开授权仍在核查，当前展示已归档指标绘图。
+Built with Qwen. 权重材料仅供研究与评估，遵循 [Qwen Research License](licenses/QWEN_RESEARCH_LICENSE.txt)。已加入少量获项目持有者同意展示的原图与生成对比，详见[实验图库](docs/GALLERY.md)。
+
+## 精选结果
+
+原模型在恒等编辑中增加行人／伞，频率干预在该案例中消除了新增对象。左为原图，中为原模型，右为候选。
+
+![行人／伞新增的案例修复](assets/examples/identity_person_repaired.jpg)
+
+更多原模型艺术风格效果和仍未修复的货车案例见[实验图库](docs/GALLERY.md)。
