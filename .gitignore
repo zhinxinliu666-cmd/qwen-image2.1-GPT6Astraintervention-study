@@ -9,3 +9,5 @@ checkpoints/
 *.safetensors
 *.zip
 .DS_Store
+
+!artifacts/output_head_patches.pt

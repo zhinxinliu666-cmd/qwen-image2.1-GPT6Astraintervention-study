@@ -46,3 +46,22 @@ python scripts/summarize_results.py
 ## 参考
 
 频率干预借鉴 [FreqEdit](https://github.com/FreqEdit/FreqEdit)。模型来自[Qwen-Image-2.1](https://github.com/QwenLM/Qwen-Image-2.1)。项目动机参考[Weight-Space Programming](https://rikiyat.github.io/blog/weight-space-programming/)。第三方实现、模型和数据沿用各自授权条件。
+
+## 图片与实际权重干预代码
+
+![两种子指标对比](assets/confirmation_two_seeds.png)
+
+- `experiments/archive/` 保存7份历史GPU实验代码及入口说明。
+- `artifacts/output_head_patches.pt` 包含实际输出层权重补丁、原始投影权重与随机对照。该补丁在已记录实验中未获得可靠收益。
+- `scripts/run_image_edit.py` 提供参数化的原模型/静态补丁推理入口，检查原始投影权重完全一致，并在推理后恢复。新入口尚未在GPU重新运行。
+
+```sh
+python scripts/run_image_edit.py --model /path/to/Qwen-Image-2.1 \
+  --image /path/to/input.png --prompt "Convert to watercolor while preserving all objects and layout." \
+  --output runs/native
+python scripts/run_image_edit.py --model /path/to/Qwen-Image-2.1 \
+  --image /path/to/input.png --prompt "Convert to watercolor while preserving all objects and layout." \
+  --patch artifacts/output_head_patches.pt --variant distill05 --output runs/patched
+```
+
+Built with Qwen. 权重材料仅供研究与评估，遵循 [Qwen Research License](licenses/QWEN_RESEARCH_LICENSE.txt)。来源图片和生成对比图的公开授权仍在核查，当前展示已归档指标绘图。

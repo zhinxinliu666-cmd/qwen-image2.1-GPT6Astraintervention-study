@@ -1,0 +1,23 @@
+{
+  "sha256": "0d20e303ad2f6a291928bbd86c450b6bf733e213dd08848b3714c68ce1c8afde",
+  "bytes": 3673125,
+  "module": "transformer.proj_out.weight",
+  "shape": [
+    64,
+    4096
+  ],
+  "contains": [
+    "original_weight",
+    "ridge_delta_float32",
+    "variants"
+  ],
+  "variants": [
+    "distill025",
+    "distill05",
+    "distill10",
+    "random_matched05"
+  ],
+  "result": "Exploratory patches; no reliable improvement over random control in recorded development evaluation.",
+  "license": "../licenses/QWEN_RESEARCH_LICENSE.txt",
+  "modified": "Output projection variants fitted and evaluated on 2026-11-18. Original weight retained for exact compatibility checks."
+}
