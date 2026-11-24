@@ -1,4 +1,4 @@
-# Qwen-Image Intervention Study
+# Qwen-Image2.1-GPT6Astra-Intervention Study
 
 **An exploratory study of model interventions, content preservation, and failure analysis in Qwen-Image-2.1.**
 
