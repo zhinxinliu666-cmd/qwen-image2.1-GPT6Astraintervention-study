@@ -1,0 +1,11 @@
+{
+  "versions": {
+    "torch": "2.8.0+cu128",
+    "diffusers": "0.42.0.dev0",
+    "transformers": "5.22.2",
+    "safetensors": "0.8.0",
+    "Pillow": "11.3.0"
+  },
+  "gpu": "NVIDIA A800-SXM4-80GB",
+  "dtype": "bfloat16"
+}

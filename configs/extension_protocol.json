@@ -1,0 +1,25 @@
+{
+  "frozen_at": "2026-11-18T15:48:45.964712+08:00",
+  "candidate": "freq10_guided12",
+  "candidate_parameters": "Same frozen alpha1 compensated, CFG1.2,40steps,seed42,1024,BF16 as round10; no new tuning",
+  "source_manifest_sha256": "dada972581dae2f37d25223da54aca79f3f92314945d75a6c435b3d13c9edc67",
+  "sources": 30,
+  "styles": [
+    "watercolor",
+    "oil",
+    "sketch"
+  ],
+  "paired_outputs": 90,
+  "generation_status": "Not launched; conditional on seed123 replication",
+  "numeric_rules": {
+    "dino_mean_min": 0.01,
+    "dino_source_bootstrap_lower_min_exclusive": 0,
+    "source_nondecreasing_min": 23,
+    "l14_style_mean_min": -0.005,
+    "l14_target_mean_min": -0.005,
+    "b32_style_mean_min": -0.005
+  },
+  "visual_rule": "Inspect all90 paired outputs with hidden method labels and record errors before revealing labels; report subgroup regressions and added objects even if aggregate numeric rules pass.",
+  "analysis": "Source-level bootstrap10000, seed20261118; no treating90 edits as90 independent sources; no official PIE score claim.",
+  "archive_note": "Original pre-run protocol. Generation and numeric evaluation completed on 2026-11-18; status strings below describe freeze time."
+}
